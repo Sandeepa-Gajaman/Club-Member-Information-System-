@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang= "en">
+<head>
+<title>Member Details</title>
+<meta charset= "utf-8">
+<meta name= "viewport" content= "width=device-width, initial-scale= 1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<!--Linking the bootstrap libraries throug CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/NavbarStyle.css">
+
+<style>
+.requiredField{color: red;}
+.button1{width: 125px;}
+.footer{position: fixed; padding-top: 5px; left: 0; bottom: 0; width: 100%; background-color: #222; color: white; height: 65px;}
+.myNavBar{background-color: #708090; text-color: white;}
+.my {
+    color: white;
+}
+
+</style>
+<body>
+
+<!--Navigation bar------------------>
+<nav class="navbar navbar-inverse" id="myNavbar">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+          <ul class="nav navbar-nav navbar-left">
+            <br>
+            <li><img src="1.png" alt="Uploded" style="width:120px;height:40px;"></li>
+            <li>&nbsp;&nbsp;&nbsp;</li>
+            <li><a class="navbar-brand" href="#">NSBM Chess Club</a></li>
+          </ul>
+
+    		</div>
+        <br>
+    		<div class="collapse navbar-collapse" id="navbar-collapse-4">
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="AdminDashboard.html" class="Home">Home</a></li>
+            <li><a href="NewsFeedViewAdmin.html" class="Report">News</a></li>
+    				<li><a href="#" class="About">About</a></li>
+    				<li><a href="#" class="Report">You are logged in as <b>Akila Udara</b></a></li>
+            <li><a href="Login.html" class="out">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+    </div>
+    </div>
+    </nav>
+
+
+
+<div class= "well headingWell" style= "height: 70px;"><h3 id= "h31" style="text-align:center; margin-top: 5px;">Member Details</h3></div>
+
+<!--Form------------------>
+<div class= "container" align="">
+<form class= "table table-hover" >
+
+<table id="details" height="100%" width="100%" class="table table-hover">
+
+<tr>
+<th></th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>NSBM ID</th>
+<th>Email Address</th>
+<th>Mobile Number</th>
+<th>Date of Birth</th>
+<th>Gender</th>
+<th></th>
+</tr>
+
+
+<tr>
+<td><a href="UpdateMember.html" class="btn btn-primary button1" role="button" style="margin:2px; width:40px; height:30px"><span class="glyphicon glyphicon-edit "></span></a></td>
+<td>Niroshan</td>
+<td>Perera</td>
+<td>Administrator</td>
+<td>BSC-PLY-COM-15.1-080</td>
+<td>niroshanperera@ymail.com</td>
+<td>0778456523</td>
+<td>30/04/1996</td>
+<td>male</td>
+<td><a  class="btn btn-danger button1" role="button" style="margin:2px; width:40px; height:30px" onclick="validate();"><span class="glyphicon glyphicon-trash glyphicon-lg"></span></a></td>
+</tr>
+
+<tr>
+<td><a href="UpdateMember.html" class="btn btn-primary button1" role="button" style="margin:2px; width:40px; height:30px"><span class="glyphicon glyphicon-edit "></span></a></td>
+<td>Akila</td>
+<td>Gamage</td>
+<td>Administrator</td>
+<td>BSC-PLY-COM-16.1-122</td>
+<td>udaraakila@gmail.com</td>
+<td>0716756766</td>
+<td>26/06/1993</td>
+<td>male</td>
+<td><a  class="btn btn-danger button1" role="button" style="margin:2px; width:40px; height:30px" onclick="validate();"><span class="glyphicon glyphicon-trash glyphicon-lg"></span></a></td>
+</tr>
+
+<tr>
+<td><a href="UpdateMember.html" class="btn btn-primary button1" role="button" style="margin:2px; width:40px; height:30px"><span class="glyphicon glyphicon-edit "></span></a></td>
+<td>Ambiga</td>
+<td>Shanmuganadan</td>
+<td>Administrator</td>
+<td>BSC-FOUND-BIS-16.1-101</td>
+<td>ambiga98@gmail.com</td>
+<td>0712433237</td>
+<td>19/10/1998</td>
+<td>female</td>
+<td><a  class="btn btn-danger button1" role="button" style="margin:2px; width:40px; height:30px" onclick="validate();"><span class="glyphicon glyphicon-trash glyphicon-lg"></span></a></td>
+</tr>
+
+<tr>
+<td><a href="UpdateMember.html" class="btn btn-primary button1" role="button" style="margin:2px; width:40px; height:30px"><span class="glyphicon glyphicon-edit "></span></a></td>
+<td>Shamal</td>
+<td>Manawadu</td>
+<td>Regular User</td>
+<td>BSC-PLY-COM-16.1-074</td>
+<td>shamalmanawadu@outlook.com</td>
+<td>0715468665</td>
+<td>10/06/1996</td>
+<td>male</td>
+<td><a  class="btn btn-danger button1" role="button" style="margin:2px; width:40px; height:30px" onclick="validate();"><span class="glyphicon glyphicon-trash glyphicon-lg"></span></a></td>
+</tr>
+
+<tr>
+<td><a href="UpdateMember.html" class="btn btn-primary button1" role="button" style="margin:2px; width:40px; height:30px"><span class="glyphicon glyphicon-edit "></span></a></td>
+<td>Dilrukshi</td>
+<td>Perera</td>
+<td>Regular User</td>
+<td>BSC-PLY-BIS-15.1-053</td>
+<td>dilruperera@yahoo.com</td>
+<td>0753654259</td>
+<td>30/09/1992</td>
+<td>female</td>
+<td><a  class="btn btn-danger button1" role="button" style="margin:2px; width:40px; height:30px" onclick="validate();"><span class="glyphicon glyphicon-trash glyphicon-lg"></span></a></td>
+</tr>
+
+
+
+
+</tr>
+</table>
+  
+  <!-- Modal box for the save button-->
+<div class= "modal fade" id= "saveModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to delete?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" value= "yes" onclick= "saveForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+<!-- Modal box for a successful save-->
+<div class= "modal fade" id= "successModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-ok-sign" style= "color: green;">&nbsp </span>Success</h4>
+</div>
+
+<div class= "modal-body"><p>Member succesfully deleted</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-default button1" data-dismiss= "modal" onclick="deletes();">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+</form> 
+</div>
+
+<!--Footer------------------>
+<div class= "footer" align= "center" >
+<h5><b>&copy NSBM Chess Club</b></h5>
+<h5>Contact Us	&nbsp &nbsp	Telephone: 0112729729 &nbsp &nbsp &nbsp	Email : nsbmchessclub@nsbm.lk</h5>
+</div>
+
+<script>
+/*function edit(){
+window.location.href="UpdateMember.html";
+*/
+function validate()
+{
+$("#saveModal").modal();
+
+}
+function saveForm()
+{
+
+	$("#successModal").modal();
+}
+function deletes(){
+window.location.href="DeletedMemberDetails.html";
+}
+
+</script>
+
+</body>
+</html>
+

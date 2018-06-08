@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+<title>Login</title>
+<meta charset= "utf-8">
+<meta name= "viewport" content= "width=device-width, initial-scale= 1"> 							<!--Compatibility for devices with small screens-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--Linking the bootstrap libraries throug CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel= "stylesheet" type= "text/css" href= "LoginStyle.css">
+<link href="formicon.css" rel="stylesheet">
+
+ <style>
+.requiredField{color: red;}
+
+.header{width: 100px;}
+.footer{position: fixed; padding-top: 5px; bottom: 0; width: 100%; background-color: #222; color: white; height: 65px;}
+.myNavBar{background-color: #708090; text-color: white;}
+.my{color: white;}
+.row {border:3px solid black;}
+.form-group i{position:relative; left:120px;top:-44px; cursor: pointer; }
+.button1{width: 125px;}
+</style>
+</head>
+
+<body>
+<script>
+
+
+
+function validateUserName()
+   {
+   var name=document.getElementById("userName").value;  
+  // alert(name);
+
+if(name=="")
+{
+document.getElementById('p').innerHTML="Cannot have empty field!";
+document.getElementById("userName").focus(); //constraint
+
+}
+
+else
+{
+document.getElementById('p').innerHTML="";
+
+}
+
+
+   }
+function validatePassword()
+{
+
+  var pass=document.getElementById("password").value;
+//alert(pass);
+if(pass=="")
+{
+document.getElementById('pass').innerHTML="Cannot have empty field!";
+
+}
+else{
+document.getElementById('pass').innerHTML="";
+}
+
+}
+function loginValidate()
+{
+  var status=false;
+  var name=document.getElementById("userName").value;
+  var pass=document.getElementById("password").value;
+  
+  if(name=="Shamal Manawadu" && pass=="plymouth")
+     {
+	 //status=true;
+	 window.location.href="NewsFeedViewUser.html";
+     }
+  else if(name=="Akila Udara" && pass=="plymouth")
+  {
+  
+   status=true;
+   window.location.href="AdminDashboard.html";
+ //   exit(); 
+   
+   //return false;
+   
+   
+  }
+	 else
+	 {
+	 document.getElementById('pass').innerHTML="Invalid User Credential!";
+	 status=false;
+	 }
+	 return false;
+}
+function mouseoverPass() {
+  var obj = document.getElementById('password');
+  obj.type = "text";
+ // alert('hello');
+}
+function mouseoutPass() {
+  var obj = document.getElementById('password');
+  obj.type = "password";
+}
+
+</script>
+<nav class="navbar navbar-inverse" id="myNavbar">
+    	<div class="container">
+    		<div class="navbar-header">
+    			
+          <ul class="nav navbar-nav navbar-left">
+            <br>
+            <li><img src="1.png" alt="Uploded" style="width:120px;height:40px;"></li>
+            <li>&nbsp;&nbsp;&nbsp;</li>
+            <li><a class="navbar-brand" href="#">NSBM Chess Club</a></li>
+          </ul>
+
+    		</div>
+        <br>
+    		
+    	</div>
+    </nav>
+	</div>
+	</div>
+	</nav>
+
+   <div class= "well headingWell" style= "height: 70px;"><h3 id= "h31" style="text-align:center; margin-top: 5px;">Login</h3></div>
+   <br />
+<div class= "container containerForm">
+<form id= "loginForm"  method= "POST"  onsubmit= "return loginValidate()" onkeyup= "resetErrors()">
+<div class= "form-group">
+<label for= "userName"> <span class="glyphicon glyphicon-user"></span>User Name</label>
+<input name= "userName" id= "userName" type= "text" class= "form-control" onblur= "validateUserName()" placeholder="Username"style="text-align: center;cursor: pointer;"><br /><p id="p" style="color:red"></p>
+</div>
+<br/>
+<div class= "form-group">
+<label for= "password"><span class="glyphicon glyphicon-lock"></span>Password</label>
+<input name= "password" id= "password" type= "password" class= "form-control" onblur= "validatePassword()" placeholder="password" style="text-align: center;cursor: pointer;"><br />
+<i class="fa fa-eye" aria-hidden="true"onmouseover="mouseoverPass();"onmouseout="mouseoutPass();" ></i>
+<p id="pass" style="color:red"></p>
+
+</div>
+<br/>
+<div class= "form-group">
+ <input type="checkbox" name="vehicle" value="Car" checked> Remember me
+ </div>
+<p id="message" style="color:red"></p>
+<button name= "submit" type= "submit" class= "btn btn-success button1">Login</button>
+
+<br/><br/>
+<!--Below code handles error messages-->
+
+
+<h4 class= 'h42' id= "error"></h4>
+<a href= "UserAccountPasswordResetForm.html">Forgot User name or Password?</a>
+</form> 
+</div>
+
+<!--Below code processes the login request-->
+<div class= "footer" align= "center">
+<h5><b>&copy NSBM Chess Club</b></h5>
+<h5>Contact Us	&nbsp &nbsp	<span class= "glyphicon glyphicon-phone-alt"></span>&nbsp 0112729729 &nbsp &nbsp &nbsp	<span class= "glyphicon glyphicon-envelope"></span>&nbsp nsbmchessclub@nsbm.lk</h5>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang= "en">
+<head>
+<title>Update User Details</title>
+<meta charset= "utf-8">
+<meta name= "viewport" content= "width=device-width, initial-scale= 1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<!--Linking the bootstrap libraries throug CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/NavbarStyle.css">
+<style>
+.requiredField{color: red;}
+.button1{width: 125px;}
+.header{width: 100px;}
+.footer{position: fixed; padding-top: 5px; width: 100%; bottom: 0; background-color: #222; color: white; height: 65px; margin-top: 25px;}
+.myNavBar{background-color: #708090; text-color: white;}
+.my{color: white;}
+</style>
+</head>
+<body>
+
+
+
+<!--Navigation bar------------------>
+<nav class="navbar navbar-inverse" id="myNavbar">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+          <ul class="nav navbar-nav navbar-left">
+            <br>
+            <li><img src="1.png" alt="Uploded" style="width:120px;height:40px;"></li>
+            <li>&nbsp;&nbsp;&nbsp;</li>
+            <li><a class="navbar-brand" href="#">NSBM Chess Club</a></li>
+          </ul>
+
+    		</div>
+        <br>
+    		<div class="collapse navbar-collapse" id="navbar-collapse-4">
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="AdminDashboard.html" class="Home">Home</a></li>
+            <li><a href="NewsFeedViewAdmin.html" class="Report">News</a></li>
+    				<li><a href="#" class="About">About</a></li>
+    				<li><a href="#" class="Report">You are logged in as <b>Akila Udara</b></a></li>
+            <li><a href="Login.html" class="out">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+    </div>
+    </div>
+    </nav>
+
+
+
+<div class= "well headingWell" style= "height: 70px;"><h3 id= "h31" style="text-align:center; margin-top: 5px;">Update Member Details</h3></div>
+
+<!--Form------------------>
+<div class= "container" style= "margin-bottom: 25px;">
+<form class= "form-horizontal" method= "post">
+
+<div class= "row">
+<div class= "col-md-4"><label class= "requiredField">* Required</label></div>
+<div class= "col-md-4"></div>
+<div class= "col-md-4"></div>
+</div>
+
+<br/>
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for="firstName">First Name <span class= "requiredField">*</span></label></div>
+<div class= "col-md-5"><input type= "text" class= "form-control" id= "firstName" placeholder= "Enter First Name" value="Akila" onblur= "checkFName();"></div>
+<div class= "col-md-4"><label id= "firstNameError" class= "requiredField"></label></div>
+</div>
+  
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "lastName">Last Name  <span class= "requiredField">*</span></label></div>
+<div class= "col-md-5"><input type= "text" class= "form-control" id= "lastName" placeholder= "Enter Last Name" value="Udara" onblur= "checkLName();"></div>
+<div class= "col-md-4"><label id= "lastNameError" class= "requiredField"></label></div>
+</div>
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label">User Type</label></div>
+<div class= "col-md-5">
+<label class= "radio-inline"><input type= "radio" id= "regularUser" name= "userType" value= "RegularUser" >Regular User</label>
+<label class= "radio-inline"><input type= "radio" id= "usertypeAdministrator" name= "userType" value="Admnistrator" checked>Administrator</label>
+</div>
+<div class= "col-md-4"><label id= "userTypeError" class= "requiredField"></label></div>
+</div>
+
+  
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "nsbmId">NSBM ID  <span class= "requiredField">*</span></label></div>
+<div class= "col-md-5"><input type= "text" class= "form-control" id= "nsbmId" placeholder= "Ex- BSC-PLY-COM-16.1-001" value="BSC-PLY-COM-16.1-122" onblur= "checkNsbmId();"></div>
+<div class= "col-md-4"><label id= "nsbmIdError" class= "requiredField"></label></div>
+</div>
+  
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "mobileNumber">Mobile Number</label></div>
+<div class= "col-md-5"><input type= "text" class= "form-control" id= "mobileNumber" placeholder= "Ex- 0777666896" value="0716756766" onblur= "checkMobileNumber();"></div>
+<div class= "col-md-4"><label id= "mobileNumberError" class= "requiredField"></label></div>
+</div>
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "dateOfBirth">Date of Birth</label></div>
+<div class= "col-md-5"><input type= "date" class= "form-control" id= "dateOfBirth" value="1994-06-26" style= "width: 35%;"></div>
+<div class= "col-md-4"><label id= "dateOfBirthError" class= "requiredField"></label></div>
+</div>
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label">Gender</label></div>
+<div class= "col-md-5">
+<label class= "radio-inline"><input type= "radio" id= "genderMale" name= "gender" value= "Male" checked>Male</label>
+<label class= "radio-inline"><input type= "radio" id= "genderFemale" name= "gender" value="Female">Female</label>
+</div>
+<div class= "col-md-4"><label id= "genderError" class= "requiredField"></label></div>
+</div>
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "password">Password  <span class= "requiredField">*</span></label></div>
+<div class= "col-md-5"><input type= "password" class= "form-control" id= "password" placeholder= "Enter a Password" value="********" onblur= "checkPassword();"></div>
+<div class= "col-md-4"><label id= "passwordError" class= "requiredField"></label></div>
+</div>
+
+<div class= "form-group">
+<div class= "col-md-3"><label class= "control-label" for= "confirm">Confirm Password  <span class= "requiredField">*</span></label></div>
+<div class= "col-md-5"><input type= "password" class= "form-control" id= "confirmPassword" placeholder= "Re-enter Password" value="********" onblur= "checkConfirmPassword();"></div>
+<div class= "col-md-4"><label id= "confirmPasswordError" class= "requiredField"></label></div>
+</div>
+
+</form>  
+</div>
+
+<div class= "container" style= "margin-bottom: 80px;">
+<div class= "col-md-3"></div>
+<div class= "col-md-6" align= "center">
+<button class= "btn btn-success button1" id= "submitButton"  onclick= "validateForm();" style= "margin: 5px;">Save</button>
+<button class= "btn btn-warning button1" id= "resetButton" onclick= "invokeResetForm();" style= "margin: 5px;">Reset</button>
+<button class= "btn btn-danger button1" id= "cancelButton" onclick= "invokeCancelForm();" style= "margin: 5px;">Cancel</button>
+</div>
+<div class= "col-md-3"></div>
+</div>
+
+<!--Footer------------------>
+<div class= "footer" align= "center">
+<h5><b>&copy NSBM Chess Club</b></h5>
+<h5>Contact Us	&nbsp &nbsp	<span class= "glyphicon glyphicon-phone-alt"></span>&nbsp 0112729729 &nbsp &nbsp &nbsp	<span class= "glyphicon glyphicon-envelope"></span>&nbsp nsbmchessclub@nsbm.lk</h5>
+</div>
+
+<script>
+/*var password= document.getElementById("password").value;
+var confirmPassword= document.getElementById("confirmPassword").value;
+var errors= false;	//True means there are no errors.
+var result;*/
+
+function validateForm(){
+	/*var fName= document.getElementById("firstName").value;
+	var pattern= /[0-9]/;
+	if(fName.length< 1 || fName.length> 25 || pattern.test(fName)== true){
+		document.getElementById("firstNameError").innerHTML= "Should contain 1- 25 characters without numbers!";
+		errors= false;
+	}
+	else{
+		document.getElementById("firstNameError").innerHTML= "";
+		errors= true;
+	}*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	var lName= document.getElementById("lastName").value;
+	var pattern= /[0-9]/;
+	if(lName.length< 1 || lName.length> 25  || pattern.test(lName)== true){
+		document.getElementById("lastNameError").innerHTML= "Should contain 1- 25 characters without numbers!";
+		errors= false;
+	}
+	else{
+		document.getElementById("lastNameError").innerHTML= "";
+		errors= true;
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	/*var nsbmId= document.getElementById("nsbmId").value;
+	var pattern= /[A-Z]{3}[-][A-Z]{3}[-][A-Z]{3}[-][0-9]+[\.][0-9][-][0-9]+/;
+	if(nsbmId.length!= 20 || pattern.test(nsbmId)== false){
+		document.getElementById("nsbmIdError").innerHTML= "Invalid ID number!";
+		errors= false; 
+	}
+	else{
+		document.getElementById("nsbmIdError").innerHTML= "";
+		errors= true;
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	var email= document.getElementById("email").value;
+	var pattern= /[a-zA-Z0-9.]{1,20}[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+[.a-z]+/;
+	if(pattern.test(email)== false){
+		document.getElementById("emailError").innerHTML= "Invalid email!";
+		errors= false;
+	}
+	else{
+		document.getElementById("emailError").innerHTML= "";
+		errors= true;
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	var mobileNumber= document.getElementById("mobileNumber").value;
+	var pattern= /[\+-]?[0-9]{9,12}/;
+	if(pattern.test(mobileNumber)== false){
+		document.getElementById("mobileNumberError").innerHTML= "Invalid mobile number!";
+		errors= false;
+	}
+	else{
+		document.getElementById("mobileNumberError").innerHTML= "";
+		errors= true;
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	password= document.getElementById("password").value;
+	if(password.length< 5 || password.length> 10){
+		document.getElementById("passwordError").innerHTML= "Password should be between 5- 10 characters!";
+		errors= false;
+	}
+	else{
+		document.getElementById("passwordError").innerHTML= "";
+		errors= true;
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	confirmPassword= document.getElementById("confirmPassword").value;
+	if(password.length== 0){
+		document.getElementById("confirmPasswordError").innerHTML= "Password is empty!";
+		errors= false;
+	}
+	else if(confirmPassword!= password){
+		document.getElementById("confirmPasswordError").innerHTML= "Passwords don't match!";
+		errors= false;
+	}
+	else{
+		document.getElementById("confirmPasswordError").innerHTML= "";
+		errors= true;
+	}*/
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	if(errors== true){
+		$("#saveModal").modal();
+		return false;//Check this.
+	}
+	else{
+		$("#errorModal").modal();
+		return false;
+	}
+}
+
+/*function checkFName(){
+	var fName= document.getElementById("firstName").value;
+	var pattern= /[0-9]/;
+	if(fName.length< 1 || fName.length> 25 || pattern.test(fName)== true){
+		document.getElementById("firstNameError").innerHTML= "Should contain 1- 25 characters without numbers!";
+		errors= false;
+	}
+	else{
+		document.getElementById("firstNameError").innerHTML= "";
+		errors= true;
+	}
+}
+*/
+function checkLName(){
+	var lName= document.getElementById("lastName").value;
+	var pattern= /[0-9]/;
+	if(lName.length< 1 || lName.length> 25  || pattern.test(lName)== true){
+		document.getElementById("lastNameError").innerHTML= "Should contain 1- 25 characters without numbers!";
+		errors= false;
+	}
+	else{
+		document.getElementById("lastNameError").innerHTML= "";
+		errors= true;
+	}
+}
+
+/*function checkNsbmId(){
+	var nsbmId= document.getElementById("nsbmId").value;
+	var pattern= /[A-Z]{3}[-][A-Z]{3}[-][A-Z]{3}[-][0-9]+[\.][0-9][-][0-9]+/;
+	if(nsbmId.length!= 20 || pattern.test(nsbmId)== false){
+		document.getElementById("nsbmIdError").innerHTML= "Invalid ID number!";
+		errors= false; 
+	}
+	else{
+		document.getElementById("nsbmIdError").innerHTML= "";
+		errors= true;
+	}
+}
+
+function checkEmail(){
+	var email= document.getElementById("email").value;
+	var pattern= /[a-zA-Z0-9.]{1,20}[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+[.a-z]+/;
+	if(pattern.test(email)== false){
+		document.getElementById("emailError").innerHTML= "Invalid email!";
+		errors= false;
+	}
+	else{
+		document.getElementById("emailError").innerHTML= "";
+		errors= true;
+	}
+}
+
+function checkMobileNumber(){
+	var mobileNumber= document.getElementById("mobileNumber").value;
+	var pattern= /[\+-]?[0-9]{9,12}/;
+	if(pattern.test(mobileNumber)== false){
+		document.getElementById("mobileNumberError").innerHTML= "Invalid mobile number!";
+		errors= false;
+	}
+	else{
+		document.getElementById("mobileNumberError").innerHTML= "";
+		errors= true;
+	}
+}
+
+function checkPassword(){
+	password= document.getElementById("password").value;
+	if(password.length< 5 || password.length> 10){
+		document.getElementById("passwordError").innerHTML= "Password should be between 5- 10 characters!";
+		errors= false;
+	}
+	else{
+		document.getElementById("passwordError").innerHTML= "";
+		errors= true;
+	}
+}
+
+function checkConfirmPassword(){
+	confirmPassword= document.getElementById("confirmPassword").value;
+	if(password.length== 0){
+		document.getElementById("confirmPasswordError").innerHTML= "Password is empty!";
+		errors= false;
+	}
+	else if(confirmPassword!= password){
+		document.getElementById("confirmPasswordError").innerHTML= "Passwords don't match!";
+		errors= false;
+	}
+	else{
+		document.getElementById("confirmPasswordError").innerHTML= "";
+		errors= true;
+	}
+}*/
+
+function saveForm(){
+	//document.getElementById("firstName").value= "";
+	document.getElementById("lastName").value= "";
+	/*document.getElementById("nsbmId").value= "";
+	document.getElementById("email").value= "";
+	document.getElementById("mobileNumber").value= "";
+	//var radioButtons= document.getElementByName("gender").innerHTML= "";
+	document.getElementById("genderMale").checked= false;
+	document.getElementById("genderFemale").checked= false;
+	document.getElementById("password").value= "";
+	document.getElementById("confirmPassword").value= "";*/
+	$("#successModal").modal();
+	//window.location.href="UpdatedMemberDetails.html";
+}
+
+function invokeResetForm(){
+	$("#resetModal").modal();
+}
+
+function resetForm(){
+	window.location.href="UpdateMember.html";
+}
+
+function invokeCancelForm(){
+	$("#cancelModal").modal();
+}
+
+function cancelForm(){
+	window.location.href="MemberDetails.html";
+}
+
+function abc(){
+window.location.href="UpdatedMemberDetails.html";
+}
+</script>
+
+<!-- Modal box for the save button-->
+<div class= "modal fade" id= "saveModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to save?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" value= "yes" onclick= "saveForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for the reset button-->
+<div class= "modal fade" id= "resetModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to reset the form?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" value= "yes" onclick= "resetForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for the cancel button-->
+<div class= "modal fade" id= "cancelModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to cancel?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" onclick= "cancelForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for a successful save-->
+<div class= "modal fade" id= "successModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-ok-sign" style= "color: green;">&nbsp </span>Success</h4>
+</div>
+
+<div class= "modal-body"><p>Details succesfully changed</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-default button1" data-dismiss= "modal" onclick= "abc();">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for form errors-->
+<div class= "modal fade" id= "errorModal" role= "dialog">
+<div class= "modal-dialog">
+    
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-remove-sign" style= "color: red;">&nbsp </span>Error</h4>
+</div>
+
+<div class= "modal-body"><p>Please complete form correctly</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-default button1" data-dismiss= "modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+</body>
+</html>
+

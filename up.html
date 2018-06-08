@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>News Feed Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<!--Linking the bootstrap libraries throug CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/NavbarStyle.css">
+    <style media="screen">
+      .requiredField{color: red;}
+      .button1{width: 125px;}
+      .footer{ bottom: 0; padding-top: 5px; width: 100%; background-color: #222; color: white; height: 65px;}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" id="myNavbar">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+          <ul class="nav navbar-nav navbar-left">
+            <br>
+            <li><img src="1.png" alt="Uploded" style="width:120px;height:40px;"></li>
+            <li>&nbsp;&nbsp;&nbsp;</li>
+            <li><a class="navbar-brand" href="#">NSBM Chess Club</a></li>
+          </ul>
+
+    		</div>
+        <br>
+    		<div class="collapse navbar-collapse" id="navbar-collapse-4">
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="#" class="Home">Home</a></li>
+            <li><a href="#" class="Report">News</a></li>
+    				<li><a href="#" class="About">About</a></li>
+    				<li><a href="#" class="Report">You are logged in as <b>Akila Udara</b></a></li>
+            <li><a href="#" class="out">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+            <li> <a class="next"><span class="glyphicon glyphicon-user"></span> </a> </li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+    </div>
+    </div>
+    </nav>
+
+    <div class= "well headingWell" style= "height: 70px;"><h3 id= "h31" style="text-align:center; margin-top: 5px;">News Uploading Form</h3></div>
+
+    <div class="" align="center">
+      <a href="up2.html" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-calendar"></span> Click Here for Show or Hide Calandar</a></div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3"><label class= "requiredField" for="Title"><span class= "requiredField">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>&nbsp;&nbsp;Indicate Required Field</label></div>
+</div><br>
+<div align="center">
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;News Title<span class= "requiredField">&nbsp;&nbsp;&nbsp;*</span></label></div>
+<div class= "col-md-5"><input style="cursor:pointer;" type= "text" class= "form-control" id= "Title" placeholder= "Enter a News Title Here"></div>
+<div class= "col-md-3"><label id= "TitleError" class= "requiredField"></label></div>
+</div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;News Content<span class= "requiredField">&nbsp;&nbsp;&nbsp;*</span></label></div>
+<div class= "col-md-6"><textarea style="cursor:pointer;" class="form-control" id="Content" placeholder= "Enter News Content Here" rows="5"></textarea></div><br><br><br><br>
+<div class= "col-md-3"><label id= "ContentError" class= "requiredField"></div>
+</div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date</label></div>
+<div class= "col-md-2"><input style="cursor:pointer;" type= "date" class= "form-control" id= "Title" placeholder= "Enter News Title"></div>
+</div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time</label></div>
+<div class= "col-md-2"><input style="cursor:pointer;" type= "time" class= "form-control" id= "Title" placeholder= "Enter News Title"></div>
+</div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Restriction">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Story</label></div>
+  <div class= "col-md-3" align="left"><input style="cursor:pointer;" type="checkbox" name="Restriction">&nbsp;&nbsp;Mark as a "Top Story"&nbsp;&nbsp;&nbsp;<a data-toggle="tooltip" data-placement="top" title="If you want to give top-priority to this news, you have to check this box."><span class="glyphicon glyphicon-info-sign"></span></a></div>
+</div>
+<br><br>
+<div class= "form-group">
+<div class= "col-md-3" align="left"><label class= "control-label" for="Restriction">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing Restriction</label></div>
+<div class= "col-md-3" align="left"><input style="cursor:pointer;" type="checkbox" name="Restriction">&nbsp;&nbsp;Allow Sharing&nbsp;&nbsp;&nbsp;<a data-toggle="tooltip" data-placement="top" title="By checking this check box you allow user to share this news amoung outsiders.(Ex: can share via facebook,WhatsApp,Viber,etc.) "><span class="glyphicon glyphicon-info-sign"></span></a></div>
+</div>
+<br><br><br>
+</div>
+
+<div class= "container" style= "margin-bottom: 80px;">
+<div class= "col-md-3"></div>
+<div class= "col-md-6" align= "center">
+<button data-toggle="tooltip" data-placement="top" title="Fill all Required Fields"  class= "btn btn-default button1" id= "submitButton"  onclick= "validateForm();" style= "margin: 5px;">Save</button>
+<button class= "btn btn-warning button1" id= "resetButton" onclick= "invokeResetForm();" style= "margin: 5px;">Reset</button>
+<button class= "btn btn-danger button1" id= "cancelButton" onclick= "invokeCancelForm();" style= "margin: 5px;">Cancel</button>
+</div>
+<div class= "col-md-3"></div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<script>
+
+function invokesaveForm(){
+	$("#saveModal").modal();
+}
+
+function invokeResetForm(){
+	$("#resetModal").modal();
+}
+
+function invokeCancelForm(){
+	$("#cancelModal").modal();
+}
+
+function cancelForm(){
+	window.location.href="AdminDashboard.html";
+}
+
+function resetForm(){
+	window.location.href="up.html";
+}
+
+</script>
+
+<script>
+
+
+function validateForm(){
+	var fName= document.getElementById("Title").value;
+	var pattern= /[0-9]/;
+	if(fName.length< 1 || fName.length> 25 || pattern.test(fName)== true){
+		document.getElementById("TitleError").innerHTML= "Please Enter a Valid News Title";
+		errors= false;
+	}
+	else{
+		document.getElementById("TitleError").innerHTML= "";
+		errors= true;
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	var lName= document.getElementById("Content").value;
+	var pattern= /[0-9]/;
+	if(lName.length< 1 || lName.length> 25  || pattern.test(lName)== true){
+		document.getElementById("ContentError").innerHTML= "Please Enter a Valid News Content";
+		errors= false;
+	}
+	else{
+		document.getElementById("ContentError").innerHTML= "";
+		errors= true;
+	}
+
+
+	if(errors== true){
+		$("#saveModal").modal();
+		return false;//Check this.
+	}
+	else{
+		$("#errorModal").modal();
+		return false;
+	}
+}
+
+function saveForm(){
+	document.getElementById("Title").value= "";
+
+	$("#successModal").modal();
+}
+
+function invokeResetForm(){
+	$("#resetModal").modal();
+}
+
+</script>
+
+<!-- Modal box for the save button-->
+<div class= "modal fade" id= "saveModal" role= "dialog">
+<div class= "modal-dialog">
+
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to save?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" value= "yes" onclick= "saveForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for the reset button-->
+<div class= "modal fade" id= "resetModal" role= "dialog">
+<div class= "modal-dialog">
+
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to reset the form?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" value= "yes" onclick= "resetForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for the cancel button-->
+<div class= "modal fade" id= "cancelModal" role= "dialog">
+<div class= "modal-dialog">
+
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-question-sign">&nbsp </span>Confirm Action</h4>
+</div>
+
+<div class= "modal-body"><p>Are you sure you want to cancel?</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-success button1" data-dismiss= "modal" onclick= "cancelForm();">Yes</button>
+<button type= "button" class= "btn btn-danger button1" data-dismiss= "modal">No</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!-- Modal box for a successful save-->
+<div class= "modal fade" id= "successModal" role= "dialog">
+<div class= "modal-dialog">
+
+<div class= "modal-content">
+<div class= "modal-header" style="  background-color: #fefbd8;">
+<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+<h4 class= "modal-title"><span class= "glyphicon glyphicon-ok-sign" style= "color: green;">&nbsp </span>Success</h4>
+</div>
+
+<div class= "modal-body"><p>Member succesfully added</p></div>
+
+<div class= "modal-footer">
+<button type= "button" class= "btn btn-default button1" data-dismiss= "modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+<!---->
+
+<!--Footer------------------>
+<div class= "footer" align= "center">
+<h5><b>&copy; NSBM Chess Club</b></h5>
+<h5>Contact Us	&nbsp; &nbsp;	<span class= "glyphicon glyphicon-phone-alt"></span>&nbsp; 0112729729 &nbsp; &nbsp; &nbsp;	<span class= "glyphicon glyphicon-envelope"></span>&nbsp;; nsbmchessclub@nsbm.lk</h5>
+</div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+#myNavbar .navbar-brand{
+	color:#FFFFFF;
+}
+
+#myNavbar .Home{
+	color:#FFFFFF;
+}
+
+#myNavbar .About{
+	color:#FFFFFF;
+}
+
+#myNavbar .Report{
+	color: #FFFFFF;
+}
+
+#myNavbar .Sign{
+	color: #FFFFFF;
+}
+
+#myNavbar .next{
+	color: #222222;
+}
+
+#myNavbar .Log{
+	color: #FFFFFF;
+}
+
+#myNavbar .out{
+	color: #FFFFFF;
+}
+
+#myNavbar .out:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .dropdown-toggle{
+	color: #FFFFFF;
+}
+
+#myNavbar .dropdown-toggle:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .navbar-brand:hover{
+	color:#FFFF00;
+}
+
+#myNavbar .Home:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .About:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .Contact1:hover{
+	color: #EA4335;
+}
+
+#myNavbar .Contact2:hover{
+	color: #094AB1;
+}
+
+#myNavbar .Contact3:hover{
+	color: #EA4335;
+}
+
+#myNavbar .Contact4:hover{
+	color: #094AB1;
+}
+
+#myNavbar .Contact5:hover{
+	color: #34A853;
+}
+
+#myNavbar .Report:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .Sign:hover{
+	color: #FFFF00;
+}
+
+#myNavbar .Log:hover{
+	color: #FFFF00;
+}
+
+#myNavbar.navbar {
+  min-height: 80px;
+}
+
+#myNavbar.navbar-brand {
+  padding: 0px;
+  height: 80px;
+  line-height: 80px;
+}
+
+#myNavbar.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  #myNavbar.navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
